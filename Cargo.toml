@@ -1,0 +1,12 @@
+[package]
+name = "ising_model"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rand = "0.8"   # 随机数
+rayon = "1.7"  # 并行扫描温度（不需要可去掉）
+
+[profile.release]
+lto = true
+codegen-units = 1
